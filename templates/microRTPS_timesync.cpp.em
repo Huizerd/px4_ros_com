@@ -94,7 +94,7 @@ void TimeSync::start(TimesyncPublisher *pub)
 
 			pub->publish(&msg);
 
-			std::this_thread::sleep_for(std::chrono::milliseconds(20));
+			std::this_thread::sleep_for(std::chrono::milliseconds(100));
 		}
 	};
 	_request_stop = false;
@@ -112,7 +112,7 @@ void TimeSync::init_status_pub(TimesyncStatusPublisher *status_pub)
 
 			status_pub->publish(&status_msg);
 
-			std::this_thread::sleep_for(std::chrono::milliseconds(20));
+			std::this_thread::sleep_for(std::chrono::milliseconds(100));
 		}
 	};
 	_request_stop = false;
